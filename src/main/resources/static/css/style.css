@@ -1,0 +1,194 @@
+:root {
+    /* dark shades of primary color*/
+    --clr-primary-1: hsl(205, 86%, 17%);
+    --clr-primary-2: hsl(205, 77%, 27%);
+    --clr-primary-3: hsl(205, 72%, 37%);
+    --clr-primary-4: hsl(205, 63%, 48%);
+    /* primary/main color */
+    --clr-primary-5: #49a6e9;
+    /* lighter shades of primary color */
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-2: hsl(211, 39%, 23%);
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-4: hsl(209, 28%, 39%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-grey-6: hsl(209, 23%, 60%);
+    --clr-grey-7: hsl(211, 27%, 70%);
+    --clr-grey-8: hsl(210, 31%, 80%);
+    --clr-grey-9: hsl(212, 33%, 89%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --clr-white: #fff;
+    --clr-red-dark: hsl(360, 67%, 44%);
+    --clr-red-light: hsl(360, 71%, 66%);
+    --clr-green-dark: hsl(125, 67%, 44%);
+    --clr-green-light: hsl(125, 71%, 66%);
+    --clr-gold: #c59d5f;
+    --clr-black: #222;
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    }
+* {
+    margin: 0;
+    padding: 0;
+}
+.site-header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    height: 70px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+  }
+  .logo {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .nav-link:hover {
+    background-color: #555;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .title h2 {
+    font-size: 50px;
+  }
+  .title .underline {
+    width: 25rem;
+    height: 0.25rem;
+    background: rgb(247, 164, 9);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 768px) {
+      .title h2 {
+          font-size: 30px;
+      }
+      .underline {
+          width: 15rem;
+      }
+  }
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 2rem;
+    justify-items: center;
+}
+.menu-item {
+    display: flex;
+}
+.photo {
+    object-fit: cover;
+    height: 200px;
+    border: 0.25rem solid var(--clr-gold);
+    border-radius: var(--radius);
+}
+.item-info header {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px dotted var(--clr-grey-5);
+}
+.item-info h4 {
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+.price {
+    color: var(--clr-gold);
+    margin-left: 30px;
+    font-size: 20px;
+}
+.item-text {
+    margin-bottom: 0;
+    padding-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
+    }
+    .title h2 {
+            font-size: 30px;
+        }
+        .underline {
+            width 15rem;
+        }
+    .photo {
+    height: 175px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .section-center {
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+    }
+    .title h2 {
+        font-size: 40px;
+    }
+    .underline {
+        width 20rem;
+    }
+    .photo {
+    height: 150px;
+    }
+}
+.menu-item {
+    position: relative;
+  }
+  
+  .action {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: flex;
+  }
+  
+  .action > a {
+    margin-left: 20px; /* Adjust the margin as needed */
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+  .action a i {
+    font-size: 16px;
+    color: inherit;
+    /* opacity: 0.8; */
+  }
+    
